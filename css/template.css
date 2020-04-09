@@ -1,0 +1,107 @@
+
+
+#bouton_jouer{
+    color:blue;
+    display: inline;
+    font-size: 30px;
+}
+
+#bouton_jouer:hover{
+    font-size: 55px;
+}
+
+#jouer{
+    position:relative;
+    bottom:175px;
+    text-decoration: underline blue;
+    align:center;
+}
+#menu
+{
+    position: fixed;
+    padding: 20px 30px 10px 10px;
+    background: dodgerblue;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+}
+
+h1{
+    font-size: 45px;
+}
+
+#presentation
+{
+    padding: 80px 0 50px 0;
+    text-align: center;
+}
+
+#jouer{
+    padding: 80px 0 50px 0;
+    text-align: center;
+}
+
+/*
+#lobbys
+{
+    align: center ;
+    bottom:0;
+    height: 30%;
+    width: 60%;
+    margin: 0 0 0 20%;
+    border-style: solid;
+    border-color: black;
+    position: static;
+}
+
+#listeLobbys
+{
+    padding: 0 10px 0 10px;
+    list-style-type: none;
+}
+
+.lobbyButtons
+{
+    width: 100%;
+    height: 40px;
+}*/
+
+#logo
+{
+    width: 50px;
+}
+
+ul {
+    padding:0;
+    margin:0;
+    list-style-type:none;
+}
+li {
+    margin-left:2px;
+    float:left; /*pour IE*/
+}
+.buttons {
+    display:block;
+    float:left;
+    width:80px;
+    background-color:blue;
+    text-align:center;
+    padding:5px;
+    border:2px solid;
+    /*pour avoir un effet "outset" avec IE :*/
+    border-color:#DCDCDC #696969 #696969 #DCDCDC;
+    float: right;
+
+}
+.buttons:hover {
+    background-color:#D3D3D3;
+    border-color:#696969 #DCDCDC #DCDCDC #696969;
+}
+
+a{
+    color:white;
+    text-decoration: none;
+}
+a:hover{
+    color: aquamarine;
+}

@@ -1,0 +1,81 @@
+img {
+    vertical-align: middle;
+}
+
+table{
+    border: solid;
+   color: #302e30;
+    margin-left: 70%;
+}
+/* Bloc contenant la zone de texte et bouton */
+#post_message  {
+    margin: auto;
+    border: 1px solid #d2d2d2;
+    background: #f8fafd;
+    padding: 3px;
+}
+/* Zone de texte */
+.post_message #message {
+    width: 80%;
+}
+/* Bouton d'envoi */
+.post_message #post {
+    width: 18%;
+}
+
+/* La zone où sont affichés les messages
+et utilisateurs connectés */
+.chat {
+    float: right;
+}
+/* Bloc de chargement */
+.chat #loading {
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* Annonce */
+.chat #annonce {
+    background: #f8fafd;
+    margin: -6px -7px 5px -7px;
+    padding: 5px;
+    height:20px;
+    box-shadow: 8px 8px 12px #aaa;
+    -webkit-box-shadow: 0px 8px 15px #aaa;
+}
+
+/* Zone des messages */
+.chat #text-td {
+    margin: 0px;
+    padding: 5px;
+    width:  400px;
+    background: #fff;
+    overflow:auto
+}
+/* Zone des utilisateurs connectés */
+.chat #users-td, .chat #users-chat-td {
+    margin: 0px;
+    padding: 5px;
+    width: 150px;
+    background: #ddd;
+}
+.chat #text, .chat #users, .chat #users-chat {
+    height:500px;
+}
+
+/* Modification du statut */
+.status {
+    width: 95%;
+    border: none;
+    background: #fff;
+    margin: auto;
+    text-align: right;
+}
+
+.info {
+    color: blue;
+}
+
+u{
+    font-size: small;
+}

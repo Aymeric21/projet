@@ -1,0 +1,29 @@
+#divChoix{
+    margin-top: 150px;
+    text-align: center;
+
+}
+
+#role1, #role2,#role3 ,#role4, #role5, #role6{
+    border-style: solid;
+    color: blue;
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+    position: static;
+
+}
+
+
+
+img{
+    /* pour que la taille de l'image
+        s'adapte à la taille de la div
+     */
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#js{
+    margin-left:48%;
+}
