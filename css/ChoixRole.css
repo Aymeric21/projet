@@ -1,10 +1,12 @@
 #divChoix{
     margin-top: 150px;
     text-align: center;
-
+    border-style: solid;
+    float: left;
+    margin-left: 30%;
 }
 
-#role1, #role2,#role3 ,#role4, #role5, #role6{
+#role2,#role3 ,#role4, #role5, #role6, #role7 {
     border-style: solid;
     color: blue;
     width: 120px;
@@ -12,6 +14,15 @@
     display: inline-block;
     position: static;
 
+}
+
+#role1{
+    border-style: solid;
+    color:goldenrod;
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+    position: static;
 }
 
 
@@ -24,6 +35,47 @@ img{
     max-width: 100%;
 }
 
-#js{
-    margin-left:48%;
+
+
+#lancement{
+    border-style: solid;
+    float: right;
+    width: 300px;
+    height: 330px;
+    float: right;
+    margin-top: 140px;
+}
+
+#avantlancer1
+{
+    color:blue;
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: larger;
+    display: inline-block;
+    margin-left: 35px;
+
+}
+
+#avantlancer2
+{
+    color:blue;
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: larger;
+    text-align: center;
+}
+
+#ajax{
+    margin-left: 5px;
+}
+
+#idc{
+    float: right;
+    margin-top: 500px;
+    margin-left:86% ;
+    position: absolute;
+    font-size: 80px;
+    font-weight: bold;
+    color:blue;
 }

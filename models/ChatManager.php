@@ -17,4 +17,15 @@ class ChatManager extends Model
     {
         return $this->getMess($table);
     }
+
+    public function AfficheChat($table,$pseudo,$receveur)
+    {
+        return $this->getChat($table, $pseudo, $receveur);
+    }
+
+    public function setChat($table,$pseudo,$message,$receveur)
+    {
+        $this->setMess($table,$pseudo,$message,$receveur);
+    }
+
 }

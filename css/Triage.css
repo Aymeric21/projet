@@ -1,0 +1,149 @@
+#triage{
+    text-align: center;
+    margin-top: 80px;
+}
+
+#divBrancards
+{
+    width: 1200px;
+    height: 500px;
+    border-style: solid;
+
+}
+
+
+#brancardGauche {
+    width: 180px;
+    height: 400px;
+    background-color: gray;
+    border-style: solid;
+    display: inline-block;
+    float: left;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+#brancardDroit {
+    width: 180px;
+    height: 400px;
+    background-color: gray;
+    border-style: solid;
+    display: inline-block;
+    float: left;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+#divSymptomes{
+    margin-left: 180px;
+    float: left;
+}
+
+#tableSymptomes, td, th
+{
+    border: solid 1px;
+    border-collapse: collapse;
+    height: 40px;
+    width: 300px;
+}
+
+th{
+    background-color: grey;
+}
+
+#patient1{
+    width: 170px;
+    height: 350px;
+
+}
+
+#time{
+    float: left;
+    margin-top: 5px;
+    position: absolute;
+    color: red;
+    font-weight: bold;
+}
+
+#SINUS{
+    left: 0;
+    border: solid black;
+    position: absolute;
+    height: 35px;
+    width: 90px;
+    margin-top: 5px;
+    margin-left: 60px;
+    font-size: x-small;
+    font-weight: bold;
+    background-color: lime;
+}
+
+#PMA{
+    left: 0;
+    border: solid black;
+    position: absolute;
+    height: 35px;
+    width: 85px;
+    margin-top: 5px;
+    margin-left: 160px;
+    font-size: x-small;
+    font-weight: bold;
+    background-color: gold;
+}
+
+#text_sinus{
+    margin-bottom: 80px;
+}
+
+#fiche_medical{
+    width: 220px;
+    height: 350px;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 327px;
+    border: solid;
+    text-align: left;
+}
+
+#bracelet_sinus{
+    width: 90px;
+    height: 300px;
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 230px;
+    border: solid;
+    text-align: left;
+}
+
+
+
+#img_PMA, #img_SINUS {
+    /* pour que la taille de l'image
+        s'adapte à la taille de la div
+     */
+    max-height: 100%;
+    max-width: 100%;
+}
+
+
+
+#form_blessé{
+    position: absolute;
+    border: solid;
+    width: 1000px;
+    height: 35px;
+    margin-left: 60px;
+    margin-top: 460px;
+    text-align: left;
+
+}
+#div_SINUS{
+    position: absolute;
+    display: inline-block;
+    margin-left: 110px;
+}
+#div_PMA{
+    position: absolute;
+    display: inline-block;
+    margin-left: 275px;
+}

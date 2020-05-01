@@ -141,6 +141,28 @@
 
         }
 
+        protected function getChat($table,$pseudo,$receveur)
+        {
+            $this->getBdd();
+            $allmsg = self::$_bdd->query("SELECT * FROM " .$table." WHERE (pseudo='$pseudo' OR pseudo='$receveur') AND (receveur='$receveur' OR receveur='$pseudo') ORDER BY id ASC ");
+
+            return $allmsg;
+            $allmsg->closeCursor();
+
+        }
+
+        //insérer un élément dans une table
+        protected function setMess($table, $pseudo, $message,$receveur)
+        {
+            $this->getBdd();
+            $insertsql = self::$_bdd->prepare("INSERT INTO " .$table."(pseudo,message,receveur) VALUES(?, ?,)");
+            $insertsql->execute(array($pseudo, $message,$receveur));
+
+            $insertsql->closeCursor();
+
+        }
+
+
         //enlever une table de la base de donné
         /*protected function Supp($table)
         {

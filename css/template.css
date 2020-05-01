@@ -98,10 +98,10 @@ li {
     border-color:#696969 #DCDCDC #DCDCDC #696969;
 }
 
-a{
+.a_temp{
     color:white;
     text-decoration: none;
 }
-a:hover{
+.a_temp:hover{
     color: aquamarine;
 }

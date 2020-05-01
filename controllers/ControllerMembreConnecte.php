@@ -11,13 +11,29 @@ class ControllerMembreConnecte
     {
         if (isset($url) && count($url) < 1) {
             throw new Exception("Page introuvable", 1);
-        } else {
-            $this->MembreConnecte();
         }
+        else{
+            if(isset($_GET['fonction']) and $_GET['fonction']=='listeDestinataires'){
+                $this->listeDestinataires();
+            }
+            else {
+                $this->MembreConnecte();
+            }
+        }
+
+    }
+
+    public function listeDestinataires(){
+        $this->_MembreConnecteManager = new ChatManager();
+        $connect = $this->_MembreConnecteManager->getAllMessages('connecte');
+        $fetch = $connect->fetchAll();
+        echo  json_encode($fetch);
     }
 
     public function MembreConnecte()
     {
+            session_start();
+            $peudo = $_SESSION['pseudo'];
 
             //va chercher tous les membre connecte
             //dans la BD connecte dans l'odre de connection
@@ -28,13 +44,26 @@ class ControllerMembreConnecte
             $nbconnecte = $connect->rowCount();
 
             echo " <u>Utilisateurs connecté:</u></br> 
-           <p>(" . $nbconnecte . "/19)</p>";
+           <p>(" . $nbconnecte . "/7)</p>";
 
+
+            $list = 0;
+            //on parcours la table et on affcihes les pseudos des utilisateurs connecté
+            //si le pseudo est le même que ce celui de la variable de session on spécifie avec "vous"
             while ($co = $connect->fetch())
             {
-                ?>
-                </br><b><?php echo $co['pseudo'] ?> </b></br>
-                <?php
+
+                if($co['pseudo'] == $peudo)
+                {
+                    ?>
+                        </br></br><b class="connecte_gris"><?php echo '(Vous)' . $co['pseudo'] ?> </b>
+                    <?php
+                }
+                else{
+                    ?>
+                    </br></br><b class="connecte_gris"><?php echo $co['pseudo'] ?> </b>
+                    <?php
+                }
             }
     }
 

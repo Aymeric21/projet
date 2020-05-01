@@ -46,7 +46,7 @@ class ControllerInscription
 
 
                 //afin de rediriger vers une autre page pour eviter le renvoie du formualaire a la bd
-                header('location:http://localhost/L3/projet/accueil');
+                header('location:accueil');
 
             }
             //afficher une boite de dialogue

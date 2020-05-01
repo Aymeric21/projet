@@ -57,7 +57,7 @@ class ControllerConnexion
                 }
 
                 //le gider a la bonne page
-                header('Location:choixRole');
+                header('Location:message');
 
 
             } else{

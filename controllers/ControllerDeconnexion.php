@@ -22,7 +22,7 @@ class ControllerDeconnexion
     public function deconnexion()
     {
         session_start();
-        //récupération de la variable de ssesion
+        //récupération de la variable de session
         $pseudo = $_SESSION['pseudo'];
         //connection BD
         $bdd = new PDO('mysql:host=localhost;dbname=projet', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
@@ -31,7 +31,9 @@ class ControllerDeconnexion
         // on supprime la ligne correspondante a la variable de session dans la BD
         $delete = $bdd->exec("DELETE FROM connecte WHERE pseudo='$pseudo'");
 
-        header("Location:accueil");
+        $this->view = new View('accueil');
+
+        $this->view->generate(array());
 
     }
 

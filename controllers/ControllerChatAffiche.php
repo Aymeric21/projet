@@ -25,17 +25,38 @@ class ControllerChatAffiche
     public function affichage()
     {
         session_start();
+
+        $receveur = $_SESSION['receveur'];
+        $pseudo = $_SESSION['pseudo']
+        ?>
+        <script language="JavaScript">
+
+        </script>
+        <?php
+
         //requete dans la BD chat
         //pour récupérer tt les messages
         //dans une variable et les affcihés ensuite
         $this->_ChatAffichageManager = new ChatManager();
-        $allmsg = $this->_ChatAffichageManager->getAllMessages('chat');
+        $allmsg = $this->_ChatAffichageManager->AfficheChat('chat',$pseudo,$receveur);
         while($msg= $allmsg->fetch())
         {
-            ?>
-            <b><?php echo $msg['pseudo'] ?> : </b>
-            <?php echo $msg['message'] ?><br/>
-            <?php
+            if($msg['pseudo']==$pseudo)
+            {
+                echo "<div id='div_envoyeur'>
+                      <p id='psd_envoyeur'>" .$msg['pseudo']. "</p>
+                      <p id='msg_envoyeur'>" .$msg['message']. "</p>
+                      </div>" ;
+            }
+
+            else if ($msg['pseudo']==$receveur)
+            {
+                echo "<div id='div_receveur'>
+                      <p id='psd_receveur'>" .$msg['pseudo']. "</p>
+                      <p id='msg_receveur'>" .$msg['message']. "</p>
+                      </div>";
+            }
+
         }
     }
 

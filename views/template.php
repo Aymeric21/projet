@@ -7,16 +7,15 @@
     <meta charset="utf-8">
     <title>Index</title>
     <link rel="stylesheet" href="css/template.css">
-    <script src="script.js"></script>
 </head>
 
 <body>
 
 <div id="menu">
-    <ul>
-        <li><a href="accueil">Accueil</a></li>
-        <li class="buttons" ><a href="inscription">Inscription</a></li>
-        <li class="buttons" ><a href="connexion">Connexion</a></li>
+    <ul id="ul_temp">
+        <li class="li_temp"><a href="accueil">Accueil</a></li>
+        <li  class="buttons" ><a class="a_temp" href="inscription">Inscription</a></li>
+        <li  class="buttons" ><a class="a_temp" href="connexion">Connexion</a></li>
     </ul>
 
 </div>

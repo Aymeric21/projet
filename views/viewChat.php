@@ -1,7 +1,8 @@
 <head>
     <title>chat</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/chat.css">
+    <script type="text/javascript" src="js/Chat.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/chat.css" media="all"">
     <?php //LIBRAIRIE AJAX JQUERY ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -14,6 +15,9 @@
             $('#users').load('membreConnecte').fadeIn("slow");
         },1000);
         $(document).ready(function () {
+            //lancer la fonction pour la liste de personne connecter
+            remplirListeDestinataires();
+            //pour le chat
             var $form = $('#chatform');
             $('#envoimess').on('click', function () {
                 $form.trigger('submit');
@@ -33,13 +37,37 @@
                 return false;
             });
         });
+
+        function remplirListeDestinataires(){
+            const AjaxRequest = new XMLHttpRequest();
+            const listRole = document.getElementById('_listeRole');
+            var destinataire = '';
+            if( listRole.options.length > 0 ){
+                destinataire = listRole.options[listRole.selectedIndex].value;
+            }
+
+            AjaxRequest.open("GET", "membreConnecte&fonction=listeDestinataires");
+            AjaxRequest.onload = function(){
+                const result = JSON.parse(AjaxRequest.responseText);
+                const html = result.map((function (connecte) {
+                        if(connecte.pseudo === destinataire){
+                            return `<option value="${connecte.pseudo}" selected> ${connecte.pseudo} </option>`
+                        }
+                        else{
+                            return `<option value="${connecte.pseudo}" > ${connecte.pseudo} </option>`                      }
+                })).join('');
+
+                listRole.innerHTML = html;
+            };
+            AjaxRequest.send();
+        }
     </script>
 </head>
 <?php
 
 ?>
-
-<table class="chat">
+<body >
+<table class="chat" >
     <tr>
         <!-- zone des messages -->
         <td valign="top" id="text-td">
@@ -61,6 +89,9 @@
         <td id="post_message">
             <form id="chatform" action="" method="POST">
                 <input type="text" name="message" id="message" placeholder="Ecrire votre message..." maxlength="255" />
+                <select id="_listeRole" name="_listeRole" size="1">
+
+                </select>
                 <input type="submit" name="envoimess"  value="Envoyer" id="envoimess" />
             </form>
         </td>
@@ -72,3 +103,4 @@
 <div>
     <a href='deconnexion'>Se Deconnecter</a>;
 </div>
+</body>

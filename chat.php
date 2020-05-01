@@ -1,7 +1,7 @@
  <head>
         <title>chat</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="chat.css">
+        <link rel="stylesheet" type="text/css" href="css/chat.css">
         <?php //LIBRAIRIE AJAX JQUERY ?>
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

@@ -6,6 +6,7 @@ table{
     border: solid;
    color: #302e30;
     margin-left: 70%;
+    margin-top: 70px;
 }
 /* Bloc contenant la zone de texte et bouton */
 #post_message  {
@@ -78,4 +79,61 @@ et utilisateurs connectés */
 
 u{
     font-size: small;
+}
+
+#psd_envoyeur{
+    font-weight: bold;
+    font-size: x-small;
+
+}
+
+#psd_receveur{
+    font-weight: bold;
+    font-size: x-small;
+
+
+}
+
+#msg_envoyeur{
+    background:#139ee0;
+    color:#fff;
+    padding:7px 15px;
+    border-radius:10px;
+    display: inline-block;
+    font-size: small;
+
+}
+
+
+#msg_receveur{
+    background:springgreen;
+    color:#fff;
+    padding:7px 15px;
+    border-radius:10px;
+    display: inline-block;
+    font-size: small;
+
+
+
+}
+
+#div_envoyeur{
+    text-align: right;
+    vertical-align: center;
+    height: 40px;
+}
+
+#div_receveur{
+    height: 40px;
+
+
+}
+
+p{
+    margin: -1px;
+}
+
+.connecte_gris{
+    font-size: smaller;
+    color: black;
 }
