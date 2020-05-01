@@ -26,37 +26,40 @@ class ControllerChatAffiche
     {
         session_start();
 
-        $receveur = $_SESSION['receveur'];
-        $pseudo = $_SESSION['pseudo']
-        ?>
-        <script language="JavaScript">
-
-        </script>
-        <?php
-
-        //requete dans la BD chat
-        //pour récupérer tt les messages
-        //dans une variable et les affcihés ensuite
-        $this->_ChatAffichageManager = new ChatManager();
-        $allmsg = $this->_ChatAffichageManager->AfficheChat('chat',$pseudo,$receveur);
-        while($msg= $allmsg->fetch())
+        if(!empty($_SESSION['receveur']))
         {
-            if($msg['pseudo']==$pseudo)
+            $receveur = $_SESSION['receveur'];
+            $pseudo = $_SESSION['pseudo']
+            ?>
+            <script language="JavaScript">
+
+            </script>
+            <?php
+
+            //requete dans la BD chat
+            //pour récupérer tt les messages
+            //dans une variable et les affcihés ensuite
+            $this->_ChatAffichageManager = new ChatManager();
+            $allmsg = $this->_ChatAffichageManager->AfficheChat('chat',$pseudo,$receveur);
+            while($msg= $allmsg->fetch())
             {
-                echo "<div id='div_envoyeur'>
+                if($msg['pseudo']==$pseudo)
+                {
+                    echo "<div id='div_envoyeur'>
                       <p id='psd_envoyeur'>" .$msg['pseudo']. "</p>
                       <p id='msg_envoyeur'>" .$msg['message']. "</p>
                       </div>" ;
-            }
+                }
 
-            else if ($msg['pseudo']==$receveur)
-            {
-                echo "<div id='div_receveur'>
+                else if ($msg['pseudo']==$receveur)
+                {
+                    echo "<div id='div_receveur'>
                       <p id='psd_receveur'>" .$msg['pseudo']. "</p>
                       <p id='msg_receveur'>" .$msg['message']. "</p>
                       </div>";
-            }
+                }
 
+            }
         }
     }
 
