@@ -98,10 +98,33 @@ li {
     border-color:#696969 #DCDCDC #DCDCDC #696969;
 }
 
-.a_temp{
+a{
     color:white;
     text-decoration: none;
 }
-.a_temp:hover{
+a:hover{
     color: aquamarine;
 }
+
+
+
+
+/*barre de navigation en bas-de-page :*/
+#menu_bas
+{
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
