@@ -1,0 +1,55 @@
+#time{
+    float: left;
+    margin-top: 5px;
+    position: absolute;
+    color: red;
+    font-weight: bold;
+}
+
+#crra{
+    text-align: center;
+    margin-top: 80px;
+}
+
+#tableSymptomes, td, th
+{
+    border: solid 1px;
+    border-collapse: collapse;
+    height: 40px;
+    width: 600px;
+}
+td{
+    background-color: papayawhip;
+}
+
+th{
+    background-color: #EDEDED;
+}
+
+.sinus{
+    background-color: #E9ED18;
+}
+
+.UA{
+    background-color: #FC0230 ;
+}
+
+.UR{
+    background-color: #FFCC00 ;
+
+}
+.DCD{
+    background-color: #000000 ;
+    color: white;
+}
+
+.CUMP{
+    background-color: #019901;
+}
+
+#bilan{
+    border: solid 1px;
+    border-collapse: separate;
+    height: 40px;
+    width: 600px;
+}

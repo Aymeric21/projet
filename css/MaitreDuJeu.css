@@ -1,0 +1,95 @@
+#div_maitre{
+    text-align: center;
+    margin-top: 80px;
+}
+
+#div_info{
+    float: left;
+}
+
+#div_temps{
+    background-color: #139ee0 ;
+    height:60px ;
+    width: 260px;
+    padding-left: 20px;
+    padding-top:1%;
+    line-height:30%;
+    display: inline-block;
+    position: fixed;
+
+}
+#div_pause{
+    text-align: center;
+    background-color: #139ee0 ;
+    height:60px ;
+    width: 260px;
+    padding-top:1%;
+    line-height:30%;
+    display: inline-block;
+    margin-left: 300px;
+    position: absolute;
+
+}
+
+.h3_info{
+    color: papayawhip;
+    margin-top: 10px;
+}
+
+#time{
+    font-weight: bold;
+    color: darkred;
+
+}
+#form_pause{
+    display: inline-block;
+}
+#form_reprendre{
+    display: inline-block;
+}
+
+/*#chat{
+    border-style: solid;
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    display: inline-block;
+    margin-left: 200px;
+}*/
+
+#div_action{
+    margin-top: 200px;
+}
+
+#div_police{
+    background-color: #139ee0 ;
+    height:80px ;
+    width: 260px;
+    padding-left: 20px;
+    display: inline-block;
+    position: fixed;
+
+}
+
+#div_pompier{
+    background-color: #139ee0 ;
+    height:80px ;
+    width: 260px;
+    display: inline-block;
+    margin-left: 300px;
+    position: absolute;
+    padding-left: 20px;
+
+}
+#div_lancer{
+    position: absolute;
+    margin-left: 45%;
+}
+#lancer{
+    background-color: #ff1a00;
+    font-weight: bold;
+    color:white;
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+}

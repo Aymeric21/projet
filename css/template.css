@@ -1,4 +1,6 @@
-
+body{
+    background-color: #BCDEFF ;
+}
 
 #bouton_jouer{
     color:blue;
@@ -104,4 +106,25 @@ li {
 }
 .a_temp:hover{
     color: aquamarine;
+}
+
+#li_accueil{
+    background-color: blue;
+}
+#li_creer{
+    margin-left: 50px;
+    background-color: blue;
+
+}
+
+#li_rejoindre{
+    margin-left: 50px;
+    background-color: blue;
+}
+
+#partieEnCours{
+    margin-left: 275px;
+    font-weight: bold;
+    color: firebrick;
+    font-size: larger;
 }

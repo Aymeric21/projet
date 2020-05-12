@@ -162,12 +162,9 @@
 
         }
 
-
-        //enlever une table de la base de donné
-        /*protected function Supp($table)
+        protected function getAllRess()
         {
-
-        }*/
+        }
 
 
     }

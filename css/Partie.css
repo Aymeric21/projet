@@ -1,0 +1,53 @@
+#partie{
+    text-align: center;
+    margin-top: 75px;background-color: skyblue;
+    width: 800px;
+    height: 500px;
+    margin-left: 350px;
+
+}
+h1{
+    color: blue;
+    text-shadow: 2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, -2px 0 0 black, 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black;
+}
+
+.ligne{
+    height: 1px;
+    background: black;
+}
+
+table{
+    border-collapse: collapse;
+    border: solid;
+    margin-top:50px;
+    margin-left: 100px;
+
+}
+th{
+    background-color: darkorchid;
+    color: white;
+}
+td{
+    border-collapse: collapse;
+    border: solid;
+    border-right: none;
+    border-left: none;
+    width: 150px;
+    background-color: wheat;
+}
+
+#div_creer{
+    text-align: center;
+}
+#but_creer{
+    color: white;
+    font-weight: bold;
+    background-color: firebrick;
+    width: 150px;
+    height: 40px;
+    border-radius: 12px;
+
+}
+h2{
+    color:firebrick ;
+}

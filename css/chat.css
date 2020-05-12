@@ -2,41 +2,63 @@ img {
     vertical-align: middle;
 }
 
+#deconnexion{
+    position: absolute;
+    margin-top: 685px;
+}
+
 table{
     border: solid;
-   color: #302e30;
     margin-left: 70%;
     margin-top: 70px;
+    width: 350px;
+    background-color: skyblue;
 }
 /* Bloc contenant la zone de texte et bouton */
 #post_message  {
     margin: auto;
     border: 1px solid #d2d2d2;
-    background: #f8fafd;
+    background: skyblue;
     padding: 3px;
+    height: 60px;
+
 }
 /* Zone de texte */
-.post_message #message {
-    width: 80%;
+ #message {
+    width: 70%;
+     height: 20px;
 }
 /* Bouton d'envoi */
-.post_message #post {
-    width: 18%;
+#envoimess {
+    float: right;
+    background-color: #1E90FF;
+    font-weight: bold;
+    height: 25px;
+}
+/* liste déoulante des receveurs*/
+#_listeRole{
+   float: right;
+    background-color: #1E90FF;
+    font-weight: bold;
+}
+
+#div_listeRole{
+    margin-top: 10px;
 }
 
 /* La zone où sont affichés les messages
 et utilisateurs connectés */
-.chat {
+#chat {
     float: right;
 }
 /* Bloc de chargement */
-.chat #loading {
+#chat #loading {
     margin-top: 50px;
     text-align: center;
 }
 
 /* Annonce */
-.chat #annonce {
+#chat #annonce {
     background: #f8fafd;
     margin: -6px -7px 5px -7px;
     padding: 5px;
@@ -46,32 +68,25 @@ et utilisateurs connectés */
 }
 
 /* Zone des messages */
-.chat #text-td {
+#chat #text-td {
     margin: 0px;
     padding: 5px;
     width:  400px;
     background: #fff;
-    overflow:auto
+    overflow:auto;
 }
 /* Zone des utilisateurs connectés */
-.chat #users-td, .chat #users-chat-td {
+#chat #users-td, #chat #users-chat-td {
     margin: 0px;
     padding: 5px;
-    width: 150px;
-    background: #ddd;
+    background: skyblue;
+    text-align: center;
 }
-.chat #text, .chat #users, .chat #users-chat {
-    height:500px;
+#chat #text, #chat #users, #chat #users-chat {
+    height:475px;
 }
 
-/* Modification du statut */
-.status {
-    width: 95%;
-    border: none;
-    background: #fff;
-    margin: auto;
-    text-align: right;
-}
+
 
 .info {
     color: blue;
@@ -136,4 +151,8 @@ p{
 .connecte_gris{
     font-size: smaller;
     color: black;
+}
+#com{
+    text-align: center;
+    font-weight: bold;
 }

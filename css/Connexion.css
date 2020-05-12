@@ -1,3 +1,27 @@
-form{
-    margin-top: 100px;
+#div_connexion{
+    text-align: center;
+    margin-top: 75px;background-color: skyblue;
+    width: 700px;
+    height: 400px;
+    margin-left: 425px;
+
+}
+h1{
+    color: blue;
+    text-shadow: 2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, -2px 0 0 black, 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black;
+}
+
+table{
+    text-align: center;
+    margin-left: 30%;
+    margin-top: 75px;
+    color: darkblue;
+}
+label{
+    font-weight: bold;
+    font-size: larger;
+}
+
+tr{
+    height: 50px;
 }

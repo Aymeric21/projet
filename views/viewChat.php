@@ -2,7 +2,7 @@
     <title>chat</title>
     <meta charset="utf-8">
     <script type="text/javascript" src="js/Chat.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/chat.css" media="all"">
+    <link rel="stylesheet" type="text/css" href="css/chat.css?t=<? echo time(); ?>media="all"" >
     <?php //LIBRAIRIE AJAX JQUERY ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -10,15 +10,16 @@
     <script>
         setInterval(function(){
             $('#text').load('ChatAffiche').fadeIn("slow");
+
         },1000);
         setInterval(function(){
             $('#users').load('membreConnecte').fadeIn("slow");
+            remplirListeDestinataires();
         },1000);
         $(document).ready(function () {
             //lancer la fonction pour la liste de personne connecter
-            remplirListeDestinataires();
             //pour le chat
-            var $form = $('#chatform');
+            var $form = $("#chatform");
             $('#envoimess').on('click', function () {
                 $form.trigger('submit');
                 return false;
@@ -62,16 +63,19 @@
             AjaxRequest.send();
         }
     </script>
+
 </head>
 <?php
 
 ?>
 <body >
-<table class="chat" >
+<table id="chat" >
     <tr>
         <!-- zone des messages -->
         <td valign="top" id="text-td">
-            <div id="annonce"></div>
+            <div id="annonce">
+                    <button id="reduire" onclick="reduire()" >-</button>
+            </div>
             <div id="text">
 
             </div>
@@ -89,10 +93,14 @@
         <td id="post_message">
             <form id="chatform" action="" method="POST">
                 <input type="text" name="message" id="message" placeholder="Ecrire votre message..." maxlength="255" />
-                <select id="_listeRole" name="_listeRole" size="1">
-
-                </select>
                 <input type="submit" name="envoimess"  value="Envoyer" id="envoimess" />
+                <div id="div_listeRole">
+                    <label for="_listeRole" id="lab_listeRole">Destinataire ?</label>
+                    <select id="_listeRole" name="_listeRole" size="1">
+
+                    </select>
+                </div>
+
             </form>
         </td>
     </tr>
@@ -101,6 +109,6 @@
 </table>
 
 <div>
-    <a href='deconnexion'>Se Deconnecter</a>;
+    <a id="deconnexion" href='deconnexion'>Se Deconnecter</a>
 </div>
 </body>

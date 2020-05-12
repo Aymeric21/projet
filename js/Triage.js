@@ -10,18 +10,35 @@ function fiche_PMA(){
     {
         elmt.innerHTML = '<img src="images/PMA.png" alt="PMA" id="img_PMA">';
 
-        elmt2.innerHTML=    '  <label for="UA">UA</label>\n' +
+        elmt2.innerHTML=    '<b><label>Catégorie :</label></b>\n' +
+                            '  <label for="UA">UA</label>\n' +
                             '  <input type="radio" id="UA" name="PMA" value="UA">\n' +
                             '  <label for="UR">UR</label>\n' +
-
                             '  <input type="radio" id="UR" name="PMA" value="UR">\n' +
                             '  <label for="DCD">DCD</label>\n' +
-
                             '  <input type="radio" id="DCD" name="PMA" value="DCD">\n' +
                             '  <label for="CUMP">CUMP</label>\n' +
-
                             '  <input type="radio" id="CUMP" name="PMA" value="CUMP">\n' +
-                            '  <input type="submit" name="envoi_blessé"  value="Valider" id="envoi_blessé" />';
+                            '  <br\>\n' +
+
+                            '<b><label>Sexe :</label></b>\n' +
+                             '  <label for="Féminin">Féminin</label>\n' +
+                            '  <input type="radio" id="Féminin" name="Sexe" value="F">\n' +
+                            '  <label for="Masculin">Masculin</label>\n' +
+                            '  <input type="radio" id="Masculin" name="Sexe" value="M">\n' +
+                            '  <br\>\n' +
+
+                            '<b><label for="age">Age :</label></b>\n' +
+                            '  <label for="petit">0-24 mois</label>\n' +
+                            '  <input type="radio" id="petit" name="age" value="0-24 mois">\n' +
+                            '  <label for="moyen">2-14 ans</label>\n' +
+                            '  <input type="radio" id="moyen" name="age" value="2-14 ans">\n' +
+                            '  <label for="grand">Adulte</label>\n' +
+                            '  <input type="radio" id="grand" name="age" value="Adulte">\n' +
+                            '  <br\>\n' +
+
+
+            '  <input type="submit" name="envoi_blessé"  value="Valider" id="envoi_blessé" />';
 
         x=x+1;
     }
@@ -54,19 +71,55 @@ function fiche_SINUS() {
     }
 }
 
+var z=0;
 function verif_blessé() {
-    //si le sinus ne contient pas 21 caractère
-    if (document.form_blessé.num_sinus.value.length != 21) {
-        alert("Le numéro de SINUS doit contenir 21 caractères ");
+   // Vérifie dans le formulaire qu'un age a été choisis
+    for (i = 0; i < document.form_blessé.age.length; i++) {
+        if (document.form_blessé.age[i].checked)
+        {
+            z++;
+        }
+    }
+    if (z==0)
+    {
+        alert("Veuillez en selectionner un age !");
+        return false;
+    }
+    z=0;
+
+    // Vérifie dans le formulaire qu'un sexe a été choisis
+    for (i = 0; i < document.form_blessé.Sexe.length; i++) {
+        if (document.form_blessé.Sexe[i].checked)
+        {
+            z++;
+        }
+    }
+    if (z==0)
+    {
+        alert("Veuillez en selectionner un sexe !");
+        return false;
+    }
+    z=0;
+
+    //si le sinus ne contient pas 8 caractère
+    if (document.form_blessé.num_sinus.value.length != 8) {
+        alert("Le numéro de SINUS doit contenir 8 caractères ");
         return false;
 
     }
-    //verifier que au moins un bouton radio a été cocher
+    //verifier que au moins un bouton radio pour la catégorie de blessure a été cocher
     for (i = 0; i < document.form_blessé.PMA.length; i++) {
-        if (document.form_blessé.PMA[i].checked) return true;
+        if (document.form_blessé.PMA[i].checked)
+        {
+            z++;
+        }
     }
-    alert("Veuillez en selectionner un !");
-    return false;
+    if (z==0)
+    {
+        alert("Veuillez en selectionner une catégorie de blessure !");
+        return false;
+    }
+
 }
 
 /*// Un tableau qui va contenir toutes tes images.

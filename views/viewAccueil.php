@@ -8,7 +8,7 @@
 </div>
 
 <div id="jouer">
-    <a href="choixRole"><h2 id="bouton_jouer"> Jouer </h2></a>
+    <a href="Partie"><h2 id="bouton_jouer"> Jouer </h2></a>
 </div>
 
 

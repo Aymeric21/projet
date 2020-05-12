@@ -43,8 +43,8 @@ class ControllerMembreConnecte
             //recupere le nombre de personne connecté
             $nbconnecte = $connect->rowCount();
 
-            echo " <u>Utilisateurs connecté:</u></br> 
-           <p>(" . $nbconnecte . "/7)</p>";
+            echo " <b><u>Connecté(s):</u></br> 
+                     (" . $nbconnecte . "/7)</b></br>";
 
 
             $list = 0;
@@ -56,12 +56,12 @@ class ControllerMembreConnecte
                 if($co['pseudo'] == $peudo)
                 {
                     ?>
-                        </br></br><b class="connecte_gris"><?php echo '(Vous)' . $co['pseudo'] ?> </b>
+                        </br><b class="connecte_gris"><?php echo '(Vous)' . $co['pseudo'] ?> </b></br>
                     <?php
                 }
                 else{
                     ?>
-                    </br></br><b class="connecte_gris"><?php echo $co['pseudo'] ?> </b>
+                    </br><b class="connecte_gris"><?php echo $co['pseudo'] ?> </b></br>
                     <?php
                 }
             }

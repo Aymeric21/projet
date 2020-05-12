@@ -147,3 +147,44 @@ th{
     display: inline-block;
     margin-left: 275px;
 }
+
+#fond {
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: #999999;
+    z-index:99; /* supérieur a toute la page sauf box */
+    opacity:0.5;
+    filter: alpha(opacity=50);
+}
+
+#box {
+    display:none;
+    width:600px;
+    height:280px;
+    position:fixed;
+    top:30%; /* centrer */
+    left: 30%;
+    background-color:#FFFFCC;
+    z-index:100;
+    text-align: center;
+}
+#box2{
+    display:none;
+    width:600px;
+    height:280px;
+    position:fixed;
+    top:30%; /* centrer */
+    left: 30%;
+    background-color:#FFFFCC;
+    z-index:100;
+    text-align: center;
+}
+#pause{
+    font-weight: bold;
+    font-size: xx-large;
+    margin-top: 20%;
+}

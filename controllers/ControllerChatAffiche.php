@@ -26,6 +26,9 @@ class ControllerChatAffiche
     {
         session_start();
 
+        //Détermine si une variable est considérée comme vide.
+        // Une variable est considérée comme vide si elle n'existe pas,
+        // ou si sa valeur équivaut à FALSE.
         if(!empty($_SESSION['receveur']))
         {
             $receveur = $_SESSION['receveur'];

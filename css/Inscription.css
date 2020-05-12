@@ -1,3 +1,27 @@
-form{
-    margin-top: 100px;
+#div_inscription{
+    text-align: center;
+    margin-top: 75px;background-color: skyblue;
+    width: 800px;
+    height: 500px;
+    margin-left: 350px;
+
+}
+h1{
+    color: blue;
+    text-shadow: 2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, -2px 0 0 black, 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black;
+}
+
+table{
+    text-align: center;
+    margin-left: 20%;
+    margin-top: 75px;
+    color: darkblue;
+}
+label{
+    font-weight: bold;
+    font-size: larger;
+}
+
+tr{
+    height: 60px;
 }
