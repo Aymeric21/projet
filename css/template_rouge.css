@@ -1,9 +1,9 @@
 body{
-    background-color: #BCDEFF ;
+    background-color: #ff964f;
 }
 
 #bouton_jouer{
-    color:blue;
+    color:mistyrose;
     display: inline;
     font-size: 30px;
 }
@@ -15,14 +15,14 @@ body{
 #jouer{
     position:relative;
     bottom:175px;
-    text-decoration: underline blue;
+    text-decoration: underline red;
     align:center;
 }
 #menu
 {
     position: fixed;
     padding: 20px 30px 10px 10px;
-    background: dodgerblue;
+    background: red;
     top: 0px;
     right: 0px;
     left: 0px;
@@ -86,7 +86,7 @@ li {
     display:block;
     float:left;
     width:80px;
-    background-color:blue;
+    background-color:rosybrown;
     text-align:center;
     padding:5px;
     border:2px solid;
@@ -105,21 +105,21 @@ li {
     text-decoration: none;
 }
 .a_temp:hover{
-    color: aquamarine;
+    color: whitesmoke;
 }
 
 #li_accueil{
-    background-color: blue;
+    background-color: rosybrown;
 }
 #li_creer{
     margin-left: 50px;
-    background-color: blue;
+    background-color: rosybrown;
 
 }
 
 #li_rejoindre{
     margin-left: 50px;
-    background-color: blue;
+    background-color: rosybrown;
 }
 
 #partieEnCours{
